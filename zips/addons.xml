@@ -1,5 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addons>
+<addon id="plugin.video.newmoviesonline" name="NewMoviesOnline" version="0.0.1" provider-name=" Dixie Normous ">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+	<import addon="script.module.addon.common" />
+	<import addon="script.module.requests" />
+	<import addon="script.module.beautifulsoup4" />
+	<import addon="script.module.resolveurl"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+		<provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+	<summary lang="en"></summary>
+	<description lang="en"></description>
+	<disclaimer lang="en"></disclaimer>
+	<platform>all</platform>
+	<broken>Need to Fix the links</broken>
+  </extension>
+</addon>
+
 <addon id="plugin.video.placenta" version="1.4.6" name="Placenta" provider-name="Team Afterbirth">
 	<requires>
 		<import addon="xbmc.python" version="2.19.0" />
@@ -704,6 +724,23 @@ General maintenance
 	</extension>
 </addon>
 
+    <addon id="repository.universalscrapers" name="universalscrapers-repository" version="1.0.0" provider-name="universalscrapers">
+        <requires>
+            <import addon="xbmc.addon" version="12.0.0"/>
+        </requires>
+        <extension point="xbmc.addon.repository" name="universalscrapers">
+            <info compressed="false">https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/</datadir>
+            <hashes>false</hashes>
+        </extension>
+        <extension point="xbmc.addon.metadata">
+            <summary>Scrape common video host for URL's to be playable in XBMC/Kodi.</summary>
+            <description>carrying on the dream</description>
+            <platform>all</platform>
+        </extension>
+    </addon>
+
 <addon id="plugin.video.hypersonicIPTV2"
        name="[COLOR steelblue]Hypersonic [COLOR white]IPTV2[/COLOR]"
        version="5.2"
@@ -1027,20 +1064,6 @@ Fixed search issue caused by character accents
   </extension>
 </addon>
 
-<addon id="plugin.video.gdrive" version="8.866" name="gdrive" provider-name="ddurdle">
-    <requires>
-        <import addon="xbmc.python" version="2.1.0"/>
-    </requires>
-    <extension point="xbmc.python.pluginsource" library="default.py">
-        <provides>video audio image programs</provides>
-    </extension>
-    <extension point="xbmc.addon.metadata">
-        <summary>Listen to music, watch videos and view photos from your Google Drive account</summary>
-        <description>Plays music and video from your Google Drive account.  Not affiliated with Google.</description>
-        <platform>all</platform>
-    </extension>
-</addon>
-
 <addon id="repository.loop" name="[COLORlime]Loop[/COLOR] Repository" version="2.0.0" provider-name="Loop">
 	<extension point="xbmc.addon.repository" name="Loop Repository">
 	<dir>
@@ -1059,6 +1082,36 @@ Fixed search issue caused by character accents
 		<description></description>
 		<platform>all</platform>
 	</extension>
+</addon>
+
+<addon id="repository.exodusredux" name="Exodus Redux Repo" version="0.0.9" provider-name="I-A-C">
+    <extension point="xbmc.addon.repository" name="Exodus Redux Repo">
+    <dir>
+        <info compressed="false">https://raw.githubusercontent.com/I-A-C/zips/master/addons.xml</info>
+        <checksum>https://raw.githubusercontent.com/I-A-C/zips/master/addons.xml.md5</checksum>
+        <datadir zip="true">https://raw.githubusercontent.com/I-A-C/zips/master/</datadir>
+    </dir>
+    <dir>
+        <info compressed="false">https://raw.githubusercontent.com/a4k-openproject/repository.openscrapers/master/zips/addons.xml</info>
+        <checksum>https://raw.githubusercontent.com/a4k-openproject/repository.openscrapers/master/zips/addons.xml.md5</checksum>
+        <datadir zip="true">https://raw.githubusercontent.com/a4k-openproject/repository.openscrapers/master/zips/</datadir>
+    </dir>
+    <dir>
+        <info compressed="false">https://raw.githubusercontent.com/jsergio123/zips/master/addons.xml</info>
+        <checksum>https://raw.githubusercontent.com/jsergio123/zips/master/addons.xml.md5</checksum>
+        <datadir zip="true">https://raw.githubusercontent.com/jsergio123/zips/master/</datadir>
+    </dir>
+    <dir>
+        <info compressed="false">https://raw.githubusercontent.com/123Venom/zips/master/addons.xml</info>
+        <checksum>https://raw.githubusercontent.com/123Venom/zips/master/addons.xml.md5</checksum>
+        <datadir zip="true">https://raw.githubusercontent.com/123Venom/zips/master/</datadir>
+    </dir>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en">Exodus Redux is a educational add-on. We do not host any of the contents streamed.</summary>
+        <description lang="en"></description>
+        <platform>all</platform>
+    </extension>
 </addon>
 
 <addon id="script.module.orion" version="3.5.2" name="Orion" provider-name="Orion">
@@ -1217,6 +1270,21 @@ Fixed search issue caused by character accents
 	</extension>
 </addon>
 
+<addon id="plugin.program.grindhousekodiwizard" name=" [B][COLOR lime]Grindhouse Wizard[/COLOR][/B]" version="1.6" provider-name="[B][COLOR blue]Grindhouse[/COLOR][/B]">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>executable</provides>
+  </extension>
+  <extension point="xbmc.service" library="startup.py" start="startup" />
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">Grindhouse Wizard</summary>
+    <description lang="en">In this wizard you will find the latest builds from Grindhouse. Thanks whufclee at NaN, GUYS at TI, Brackets for the app installer!! RomanVM for the PyXBMCt libs. Fire TV Guru for the PyXBMCt layout  Also a very special Thanks to Surfacingx for the code used in this add-on.</description>
+    <platform>all</platform>
+  </extension>
+</addon>
+
 <addon id="script.video.F4mProxy"
 	     name="F4mProxy"
 	     version="2.8.7"
@@ -1301,11 +1369,11 @@ Documentation: https://github.com/tamland/kodi-plugin-routing</description>
 	</extension>
 </addon>
 
-<addon id="repository.Wherethemonsterslive" name="Where The Monsters Live Repository" version="1.2" provider-name="Wolfey B">
+<addon id="repository.Wherethemonsterslive" name="Where The Monsters Live Repository" version="1.4" provider-name="Wolfey B">
 	<extension point="xbmc.addon.repository" name="Where The Monsters Live Repository">
-		<info compressed="false">http://secretcircle.one/seeddata/wolfyB/files/addons.xml</info>
-		<checksum>http://secretcircle.one/seeddata/wolfyB/files/addons.xml.md5</checksum>
-		<datadir zip="true">http://secretcircle.one/seeddata/wolfyB/files/</datadir>
+		<info compressed="false">http://www.midian.appboxes.co/wolfyB/files/addons.xml</info>
+		<checksum>http://www.midian.appboxes.co/wolfyB/files/addons.xml.md5</checksum>
+		<datadir zip="true">http://www.midian.appboxes.co/wolfyB/files/</datadir>
 	</extension>
 	<extension point="xbmc.addon.metadata">
 		<summary></summary>
@@ -1362,17 +1430,24 @@ Documentation: https://github.com/tamland/kodi-plugin-routing</description>
   </extension>
 </addon>
 
-<addon id="repository.Wherethemonsterslive" name="Where The Monsters Live Repository" version="1.4" provider-name="Wolfey B">
-	<extension point="xbmc.addon.repository" name="Where The Monsters Live Repository">
-		<info compressed="false">http://www.midian.appboxes.co/wolfyB/files/addons.xml</info>
-		<checksum>http://www.midian.appboxes.co/wolfyB/files/addons.xml.md5</checksum>
-		<datadir zip="true">http://www.midian.appboxes.co/wolfyB/files/</datadir>
-	</extension>
-	<extension point="xbmc.addon.metadata">
-		<summary></summary>
-		<description></description>
-		<platform>all</platform>
-	</extension>
+<addon id="plugin.video.movie.zone" name="Movie Zone" version="0.0.2" provider-name="Jimmy Jones">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+	<import addon="script.module.addon.common" />
+	<import addon="script.module.requests" />
+	<import addon="script.module.beautifulsoup4" />
+	<import addon="script.module.resolveurl"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+		<provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+	<summary lang="en">CoolMovieZone.info</summary>
+	<description lang="en">A video Addon that scrapes CoolMovieZone.info</description>
+	<disclaimer lang="en">The original author neither hosts or stores any content, the original author has no affiliation with content hosts, it is the sole responsibility of the user to ensure they have permission to view any streams provided</disclaimer>
+	<platform>all</platform>
+	<broken>Need to Fix the links</broken>
+  </extension>
 </addon>
 
 <addon id="script.kodi.hue.ambilight" name="Kodi Philips Hue" version="2.0" provider-name="Nemzzy :: Original Martin Polednik">
@@ -1385,6 +1460,24 @@ Documentation: https://github.com/tamland/kodi-plugin-routing</description>
     <summary>Kodi-controlled Philips Hue lights, Fixed By Nemzzy and Silent For Kodi 18</summary>
     <description>Let Kodi control your Philips Hue lights. Either turns the lights into a room-sized ambilight, or automatically dims and un-dims them when playback starts or stops.</description>
     <platform>all</platform>
+  </extension>
+</addon>
+
+<addon id="plugin.video.mst3k" name="MST3K" version="1.0.01" provider-name="Crow and Tom Servo">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+	<import addon="script.module.addon.common" />
+	<import addon="script.module.requests" />
+	<import addon="plugin.video.youtube"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+		<provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+	<summary lang="en"></summary>
+	<description lang="en"></description>
+	<disclaimer lang="en"></disclaimer>
+	<platform>all</platform>
   </extension>
 </addon>
 
@@ -1561,6 +1654,25 @@ Documentation: https://github.com/tamland/kodi-plugin-routing</description>
 	</extension>
 </addon>
 
+<addon id="plugin.video.bigger.pockets" name="BiggerPockets Podcast" version="0.0.2" provider-name="Bart Simpson">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+	<import addon="script.module.addon.common" />
+	<import addon="script.module.requests" />
+<!-- 	<import addon="script.module.beautifulsoup" version="3.2.1"/> -->
+	<!-- <import addon="script.module.resolveurl"/> -->
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+		<provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+	<summary lang="en">BiggerPockets Podcast</summary>
+	<description lang="en">A video Addon that scrapes biggerpockets.com</description>
+	<disclaimer lang="en">The original author neither hosts or stores any content, the original author has no affiliation with content hosts, it is the sole responsibility of the user to ensure they have permission to view any streams provided</disclaimer>
+	<platform>all</platform>
+  </extension>
+</addon>
+
 <addon id="plugin.video.Limitless"
        name="Limitless "
        version="1.0.1"
@@ -1667,6 +1779,26 @@ For more information on setting up this addon see http://brianhornsby.com/kodi_p
         <icon>icon.gif</icon>
         <fanart>fanart.jpg</fanart>
     </assets>
+  </extension>
+</addon>
+
+<addon id="plugin.video.vex" name="Vex Movies" version="0.0.6" provider-name="Jimmy Jones">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+	<import addon="script.module.addon.common" />
+	<import addon="script.module.requests" />
+	<import addon="script.module.beautifulsoup4" />
+	<import addon="script.module.resolveurl"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+		<provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+	<summary lang="en">Vex Movies</summary>
+	<description lang="en">A video Addon that scrapes vexnovies.org</description>
+	<disclaimer lang="en">The original author neither hosts or stores any content, the original author has no affiliation with content hosts, it is the sole responsibility of the user to ensure they have permission to view any streams provided</disclaimer>
+	<platform>all</platform>
+	<broken>Need to Fix the links</broken>
   </extension>
 </addon>
 
@@ -1807,6 +1939,26 @@ For more information on setting up this addon see http://brianhornsby.com/kodi_p
   </extension>
 </addon>
 
+<addon id="plugin.video.gofilms4u" name="GoFilms4U" version="0.0.1" provider-name=" Jack Mehoff ">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+	<import addon="script.module.addon.common" />
+	<import addon="script.module.requests" />
+	<import addon="script.module.beautifulsoup4" />
+	<import addon="script.module.resolveurl"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+		<provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+	<summary lang="en">A plugin for playing online lists freely sourced on the internet</summary>
+	<description lang="en">An addon using Gofilms4u Hollywood, Hindi, Tamil and Dubbed Movies</description>
+	<disclaimer lang="en">The original author neither hosts or stores any content, the original author has no affiliation with content hosts, it is the sole responsibility of the user to ensure they have permission to view any streams provided</disclaimer>
+	<platform>all</platform>
+	<broken>Need to Fix the links</broken>
+  </extension>
+</addon>
+
 <addon id="script.kratosreborn.artwork" version="1.0.0" name="kratos Reborn Artwork" provider-name="ukodi1">
 	<requires>
 		<import addon="xbmc.python" version="2.19.0"/>
@@ -1933,6 +2085,26 @@ provider-name="Team IVUE">
     <license>The MIT License</license>
     <platform>all</platform>
     <language></language>
+  </extension>
+</addon>
+
+<addon id="plugin.video.sharemovies" name="Sharemovies" version="0.0.2" provider-name="Kid Jones">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+	<import addon="script.module.addon.common" />
+	<import addon="script.module.requests" />
+	<import addon="script.module.beautifulsoup" version="3.2.1"/>
+	<import addon="script.module.resolveurl"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+		<provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+	<summary lang="en">ShareMovies</summary>
+	<description lang="en">A video Addon that scrapes sharemovies</description>
+	<disclaimer lang="en">The original author neither hosts or stores any content, the original author has no affiliation with content hosts, it is the sole responsibility of the user to ensure they have permission to view any streams provided</disclaimer>
+	<platform>all</platform>
+	<broken>Need to Fix the links</broken>
   </extension>
 </addon>
 
@@ -2346,9 +2518,9 @@ provider-name="Team IVUE">
 <addon id="repository.captainlieutenantmaverick" name="[B][COLOR dodgerblue]Captain Lieutenant Maverick[/COLOR][/B] Repository" version="1.0" provider-name="CaptainLieutenantMaverick">
 	<extension point="xbmc.addon.repository" name="[B][COLOR dodgerblue]Captain Lieutenant Maverick[/COLOR][/B] Repository">
 		<dir>
-            <info compressed="false">https://raw.githubusercontent.com/CaptainLieutenantMaverick/repository.captainlieutenantmaverick/master/zips/addons.xml</info>
-            <checksum>https://raw.githubusercontent.com/CaptainLieutenantMaverick/repository.captainlieutenantmaverick/master/zips/addons.xml.md5</checksum>
-            <datadir zip="true">https://raw.githubusercontent.com/CaptainLieutenantMaverick/repository.captainlieutenantmaverick/master/zips/</datadir>
+            <info compressed="false">https://raw.githubusercontent.com/CaptainLieutenantMaverick/captainlieutenantmaverick.github.io/master/zips/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/CaptainLieutenantMaverick/captainlieutenantmaverick.github.io/master/zips/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.githubusercontent.com/CaptainLieutenantMaverick/captainlieutenantmaverick.github.io/master/zips/</datadir>
         </dir>
 	</extension>
 	<extension point="xbmc.addon.metadata">
@@ -2565,6 +2737,23 @@ provider-name="Team IVUE">
     <source>https://code.google.com/p/pythonfutures/source/browse</source>
     <website>https://code.google.com/p/pythonfutures</website>
   </extension>
+</addon>
+
+    <addon id="repository.Sarcasm" name="Sarcasm" version="1.0.1" provider-name="JimmyJones">
+        <requires>
+            <import addon="xbmc.addon" version="12.0.0"/>
+        </requires>
+        <extension point="xbmc.addon.repository" name="Sarcasm">
+            <info compressed="false">https://raw.githubusercontent.com/j1mmyjones/sarcasm/master/_zips/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/j1mmyjones/sarcasm/master/_zips/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.githubusercontent.com/j1mmyjones/sarcasm/master/_zips/</datadir>
+            <hashes>false</hashes>
+        </extension>
+        <extension point="xbmc.addon.metadata">
+            <summary>Addons for XBMC/Kodi.</summary>
+            <description>Some addons may contain Adult content YOU have been warned.</description>
+            <platform>all</platform>
+    </extension>
 </addon>
 
 <addon id="repository.openscrapers" name="OpenScrapers Repository" version="1.0" provider-name="A4K">
@@ -3392,6 +3581,26 @@ Addon Runs A Little Slower Now Due To Site Using CloudFlare
     </extension>
 </addon>
 
+<addon id="plugin.video.yd" name="YD Movies" version="0.0.2" provider-name="Jimmy Jones">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+	<import addon="script.module.addon.common" />
+	<import addon="script.module.requests" />
+	<import addon="script.module.beautifulsoup4" />
+	<import addon="script.module.resolveurl"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+		<provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+	<summary lang="en">YD Movies</summary>
+	<description lang="en">A video Addon that scrapes ydmoviez.com</description>
+	<disclaimer lang="en">The original author neither hosts or stores any content, the original author has no affiliation with content hosts, it is the sole responsibility of the user to ensure they have permission to view any streams provided</disclaimer>
+	<platform>all</platform>
+	<broken>Need to Fix the links</broken>
+  </extension>
+</addon>
+
 <addon id="plugin.video.goto" name="C:\>Goto" version="1.0.1" provider-name="Lost Soul">
     <requires>
         <import addon="xbmc.python" version="2.19.0" />
@@ -4027,6 +4236,26 @@ Addon Runs A Little Slower Now Due To Site Using CloudFlare
     <license>MIT</license>
     <source>https://github.com/bottlepy/bottle</source>
     <website>http://bottlepy.org</website>
+  </extension>
+</addon>
+
+<addon id="plugin.video.monline" name="Movies Online" version="0.0.3" provider-name="Jimmy Jones">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+	<import addon="script.module.addon.common" />
+	<import addon="script.module.requests" />
+	<import addon="script.module.beautifulsoup4" />
+	<import addon="script.module.resolveurl"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+		<provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+	<summary lang="en">Movies Oline</summary>
+	<description lang="en">A video Addon that scrapes moviesonline.sh</description>
+	<disclaimer lang="en">The original author neither hosts or stores any content, the original author has no affiliation with content hosts, it is the sole responsibility of the user to ensure they have permission to view any streams provided</disclaimer>
+	<platform>all</platform>
+	<broken>Need to Fix the links</broken>
   </extension>
 </addon>
 
